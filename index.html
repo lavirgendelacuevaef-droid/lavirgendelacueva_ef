@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Virgen de la Cueva EF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #333;
+            
+            /* IMPORTANTE: AQUÍ CAMBIAS LA FOTO DE LA VIRGEN.
+               Busca tu foto de la "Virgen con paraguas", guárdala en la carpeta
+               con el nombre 'fondo_virgen.jpg' y se verá aquí.
+            */
+            background-image: url('fondo_virgen.jpg'); 
+            
+            /* Si no tienes la foto aún, usa esta línea de abajo temporalmente (borra las // del principio): */
+            /* background-image: url('https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&w=1920&q=80'); */
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* --- CAPA DE LLUVIA (IMAGEN GIF) --- */
+        .rain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Dejamos hacer clic a través de la lluvia */
+            z-index: 1;
+            /* Esta es una imagen de lluvia en movimiento transparente */
+            background-image: url('https://i.gifer.com/7scx.gif'); 
+            background-size: cover;
+            opacity: 0.4; /* Ajusta este número (0.1 a 1) para que se vea más o menos la virgen */
+            mix-blend-mode: screen; /* Esto hace que se vea mejor sobre fotos oscuras */
+        }
+
+        /* Contenedor principal */
+        .content-wrapper {
+            position: relative;
+            z-index: 2; /* Encima de la lluvia */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            /* Un poco de sombra negra para que el texto resalte sobre la virgen */
+            background: rgba(0,0,0,0.3); 
+        }
+
+        /* --- CABECERA --- */
+        header {
+            margin-top: 40px;
+            margin-bottom: 50px;
+            text-align: center;
+            background: rgba(255, 111, 97, 0.9); /* Color coral casi sólido */
+            padding: 20px 50px;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            border: 4px solid #fff;
+        }
+
+        h1 {
+            font-family: 'Fredoka One', cursive;
+            color: #fff;
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 3px 3px 0px #000;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* --- MENÚ DE TARJETAS --- */
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .menu-item {
+            text-decoration: none;
+            background: #fff;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
+            text-align: center;
+            width: 190px;
+            border: 4px solid #fff;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.1); /* Efecto zoom */
+            border-color: #ffcc00;
+            z-index: 10;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain; /* Esto asegura que se vea TODO el tablero/figura sin recortar */
+            border-radius: 10px;
+            margin-bottom: 10px;
+            background-color: #f0f0f0; /* Fondo grisito suave detrás de la imagen */
+        }
+
+        .menu-item span {
+            display: block;
+            color: #d35400;
+            font-weight: bold;
+            font-size: 1.2rem;
+            font-family: 'Fredoka One', cursive;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="rain-overlay"></div>
+
+    <div class="content-wrapper">
+        <header>
+            <h1>La Virgen de la Cueva EF</h1>
+        </header>
+
+        <div class="menu-container">
+            <a href="parchis_ef8.html" class="menu-item">
+                <img src="https://img.freepik.com/vector-premium/juego-mesa-parchis-o-parchis-vista-superior-vectorial-diseno-plano_535623-745.jpg" alt="Tablero Parchís"> 
+                <span>Parchís EF</span>
+            </a>
+
+            <a href="Ajedrez_EF_Premium_reglasi.html" class="menu-item">
+                <img src="https://img.freepik.com/vector-premium/tablero-ajedrez-piezas-ajedrez-ilustracion-vectorial_175838-577.jpg" alt="Ajedrez">
+                <span>Ajedrez Premium</span>
+            </a>
+
+            <a href="Semáforo_EF_música.html" class="menu-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/3233/3233497.png" alt="Semáforo">
+                <span>Semáforo Musical</span>
+            </a>
+
+            <a href="Trivial_ef2.html" class="menu-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/5692/5692030.png" alt="Trivial">
+                <span>Trivial EF</span>
+            </a>
+
+            <a href="Yoga_EF_5.html" class="menu-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/2647/2647625.png" alt="Yoga">
+                <span>Yoga</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
